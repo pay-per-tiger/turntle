@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "LOGO",
+	"description": "a LOGO environment",
+	"version": "0.2",
+	"icons": {
+		"128": "img/icon_128.png"
+		},
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	],
+	"offline_enabled": true
+}

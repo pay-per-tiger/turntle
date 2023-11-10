@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "logo",
+	"version": "1.1",
+	"description": "logo language environment",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"start_url": "turtle.html",
+	"display": "standalone"
+}

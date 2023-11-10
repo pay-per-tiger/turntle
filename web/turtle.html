@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html manifest='turtle.manifest'>
+<head>
+<link rel="manifest" href="chrome_manifest.json" />
+<link rel="icon" type="image/png" href="img/icon_32.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+<script src='turtle.js'></script>
+<script src='lang.js'></script>
+<script src='fontdata.js'></script>
+<script src='stdlib.js'></script>
+
+<script src='arvmjs/vm.js'></script>
+<script src='arvmjs/prog.js'></script>
+<script src='arvmjs/util.js'></script>
+<script src='arvmjs/commands.js'></script>
+<script src='arvmjs/arvm_asm.js'></script>
+<script src='arvmjs/csteps.js'></script>
+<script src='arvmjs/assemble.js'></script>
+<script src='arvmjs/env.js'></script>
+<script src='arvmjs/compiler_util.js'></script>
+<script src='arvmjs/ssa_rename.js'></script>
+<script src='arvmjs/newer_compiler.js'></script>
+<script src='arvmjs/sexp.js'></script>
+<script src='arvmjs/macros.js'></script>
+<script src='arvmjs/toplevel.js'></script>
+<script src='arvmjs/stdlib.js'></script>
+
+<script src='arvm_logo.js'></script>
+
+<script src='turtle_boot.js'></script>
+
+<style type="text/css">
+	html {
+		height: 100%;
+		font-family: sans, courier;
+		font-size: 12pt;
+		color: black;
+	}
+	input {
+		font-family: sans, courier;
+		font-size: 12pt;
+	}
+	body {
+		height: 100%;
+		/*background-color: gray;*/
+		font-family: sans, courier;
+		font-size: 12pt;
+		border: 0px;
+		padding: 0px;
+		margin: 0px;
+	}
+	.bigbox {
+		height: 100%;
+		/*background-color: pink;*/
+		display: -webkit-flex; /* Safari */
+		display: flex;
+		-webkit-flex-direction: column; /* Safari */
+		flex-direction: column;
+	}
+
+	.out {
+		/*background-color: red;*/
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		width: 100%;
+		outline: 0px;
+		border: 0px;
+		margin: 0px;
+	}
+
+	.in {
+		/*background-color: orange;*/
+		outline: 0px;
+		border: 0px;
+		margin: 0px;
+		width: 100%;
+		max-width: 100%;
+	}
+</style>
+
+</head>
+<body>
+<div id='everything' class='bigbox' style=''>
+  <div id='output' class='out' style='overflow: hidden; position: relative;'>
+    <div id='outer_echo' style='position: absolute; overflow: scroll; left: 0px; bottom: 0px; width: 100%; height: 100%; max-height: 100%; border: 0px; padding: 0px; margin: 0px; z-index: 2'>
+      <div id='echo' style='position: absolute; left: 0px; top: 0px; width: 100%; border: 0px; padding: 0px; margin: 0px;'>
+      </div>
+    </div>
+  </div>
+  <input type='text' id='ce' class='in' style='box-sizing:border-box; border: 0px; padding: 0px;'></input>
+</div>
+</body>
+</html>
